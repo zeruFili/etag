@@ -287,6 +287,19 @@ const next = computed(() => (idx.value >= 0 && idx.value < projects.length - 1 ?
 .detail-gallery-item.slot-4 {
   aspect-ratio: 1 / 1;
 }
+.detail-gallery-item.slot-5 {
+  aspect-ratio: 3 / 4;
+}
+.detail-gallery-item.slot-6 {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+.detail-gallery-item.slot-7 {
+  aspect-ratio: 3 / 4;
+}
+.detail-gallery-item.slot-8 {
+  aspect-ratio: 390 / 520;
+}
 .detail-pagination {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
