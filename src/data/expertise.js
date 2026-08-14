@@ -29,8 +29,8 @@ export const expertisePage = {
         },
       ],
       gallery: [
-        { category: 'RETAIL', title: 'MOLU', media: { type: 'image', src: 'https://media.yoointerior.com/assets/expertise/sections/1778153779069-molu-390x520.jpg' } },
-        { category: 'HOSPITALITY', title: 'OLEA THE BAR', media: { type: 'video', src: 'https://media.yoointerior.com/assets/expertise/sections/1778153735709-olea-390-x-520.mp4' } },
+        { category: 'RETAIL', title: 'BOLE FASHION BOUTIQUE', media: { type: 'image', src: 'https://media.yoointerior.com/assets/expertise/sections/1778153779069-molu-390x520.jpg' } },
+        { category: 'HOSPITALITY', title: 'OLEA ROOFTOP BAR', media: { type: 'video', src: 'https://media.yoointerior.com/assets/expertise/sections/1778153735709-olea-390-x-520.mp4' } },
       ],
     },
     {
@@ -59,8 +59,8 @@ export const expertisePage = {
         },
       ],
       gallery: [
-        { category: 'OFFICE', title: 'THY FINANCIAL CONTROL OFFICE', media: { type: 'video', src: 'https://media.yoointerior.com/assets/expertise/sections/1778153996061-thy-390-x-520.mp4' } },
-        { category: 'F&B', title: 'NOBU', media: { type: 'image', src: 'https://media.yoointerior.com/assets/expertise/sections/1778154176844-nobu-390x520.jpg' } },
+        { category: 'OFFICE', title: 'ADDIS TOWER CORPORATE OFFICE', media: { type: 'video', src: 'https://media.yoointerior.com/assets/expertise/sections/1778153996061-thy-390-x-520.mp4' } },
+        { category: 'F&B', title: 'LAKARA RESTAURANT', media: { type: 'image', src: 'https://media.yoointerior.com/assets/expertise/sections/1778154176844-nobu-390x520.jpg' } },
       ],
     },
     {
@@ -85,8 +85,8 @@ export const expertisePage = {
         },
       ],
       gallery: [
-        { category: 'Office', title: 'TAM F\u0130NANS', media: { type: 'image', src: 'https://media.yoointerior.com/assets/expertise/sections/1778154584059-tam-390x520.jpg' } },
-        { category: 'F&B', title: 'NUUP RESTAURANT', media: { type: 'video', src: 'https://media.yoointerior.com/assets/expertise/sections/1778154720268-nuup-390-x-520.mp4' } },
+        { category: 'Office', title: 'CMC GREEN CAMPUS', media: { type: 'image', src: 'https://media.yoointerior.com/assets/expertise/sections/1778154584059-tam-390x520.jpg' } },
+        { category: 'F&B', title: 'GENET RESTAURANT', media: { type: 'video', src: 'https://media.yoointerior.com/assets/expertise/sections/1778154720268-nuup-390-x-520.mp4' } },
       ],
     },
   ],

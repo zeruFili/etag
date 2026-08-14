@@ -4,12 +4,6 @@ export const site = {
   title: 'ETAG',
   url: 'https://etaginteriors.com',
   accent: '#a63437',
-  awwwards: 'https://www.awwwards.com/sites/etag-interiors',
-  credit: {
-    prefix: 'Designed by',
-    name: 'Workattack',
-    href: 'https://workattack.com/',
-  },
 }
 
 export const navLinks = [
@@ -52,13 +46,13 @@ export const legalLinks = [
 ]
 
 export const footerInfo = {
-  lineOne: 'ETAG INTERIORS IS A MIMAR HOLDING COMPANY.',
+  lineOne: 'ETAG INTERIORS ',
   lineTwo: '\u00a92026 ETAG INTERIORS, ALL RIGHTS RESERVED.',
 }
 
 export const assets = {
   topLine: 'https://yoointerior.com/assets/footer/top-line.svg',
-  heroVideo: '/hero.mp4',
+  heroVideo: `${import.meta.env.BASE_URL}hero.mp4`,
 }
 
 export const footerBackgroundTiles = [

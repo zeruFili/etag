@@ -23,9 +23,9 @@ const title = computed(() => (current.value ? current.value.label : 'Data Privac
       <h1 class="kvkk-title">{{ title }}</h1>
       <div class="kvkk-body">
         <p>
-          This page contains legal and privacy disclosures published by ETAG Interiors in accordance with the relevant data
-          protection regulations. The documents listed below outline how personal data is collected, processed, and
-          protected.
+          This page contains legal and privacy disclosures published by ETAG Interiors in accordance with the relevant
+          Ethiopian data protection regulations. The documents listed below outline how personal data is collected,
+          processed, and protected.
         </p>
         <p>
           For detailed information on any specific subject, please review the individual disclosure texts available from

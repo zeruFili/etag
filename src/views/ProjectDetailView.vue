@@ -19,7 +19,7 @@ const project = computed(() => {
     title: String(route.params.slug).replace(/-/g, ' ').toUpperCase(),
     category: 'PROJECT',
     client: 'ETAG INTERIORS',
-    city: 'ISTANBUL, TURKEY',
+    city: 'ADDIS ABABA, ETHIOPIA',
     year: '2026',
     area: '\u2014',
     hero: 'https://media.yoointerior.com/assets/projects/detail/1777041941157-yoointerior_nobu-istanbul_19.jpg',

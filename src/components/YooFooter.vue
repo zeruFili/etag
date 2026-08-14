@@ -1,6 +1,6 @@
 ﻿<script setup>
 import { ref, onMounted } from 'vue'
-import { navLinks, socialLinks, footerInfo, footerBackgroundTiles, assets, site } from '../data/site'
+import { navLinks, socialLinks, footerInfo, footerBackgroundTiles, assets } from '../data/site'
 import LogoMark from './LogoMark.vue'
 
 const email = ref('')
@@ -74,12 +74,6 @@ function submit(e) {
       <div class="footer-info">
         <p class="info-text">{{ footerInfo.lineOne }}</p>
         <p class="info-text">{{ footerInfo.lineTwo }}</p>
-        <p class="info-credit">
-          <span class="credit-muted">{{ site.credit.prefix }}</span>
-          <a :href="site.credit.href" target="_blank" rel="noreferrer noopener" class="credit-link">{{
-            site.credit.name
-          }}</a>
-        </p>
       </div>
       <div class="footer-background">
         <img
@@ -294,7 +288,6 @@ function submit(e) {
   letter-spacing: -0.02em;
   opacity: 0.5;
 }
-.info-credit,
 .info-text {
   font-size: 12px;
   font-weight: 300;
@@ -302,50 +295,6 @@ function submit(e) {
   margin: 0;
   text-transform: uppercase;
   white-space: nowrap;
-}
-.info-credit {
-  align-items: center;
-  display: inline-flex;
-  gap: 4px;
-  letter-spacing: -0.24px;
-}
-.credit-muted {
-  color: #8a8a8a;
-  line-height: 1.1;
-}
-.credit-link {
-  align-items: center;
-  color: #000;
-  display: inline-flex;
-  font-weight: 300;
-  line-height: 1.1;
-  padding-bottom: 2px;
-  position: relative;
-  text-decoration: none;
-}
-.credit-link::after,
-.credit-link::before {
-  bottom: 0;
-  content: '';
-  height: 1px;
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-}
-.credit-link::before {
-  background: currentColor;
-  opacity: 0.22;
-}
-.credit-link::after {
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: right center;
-  transition: transform 0.26s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.credit-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: left center;
 }
 .footer-background {
   align-items: center;
@@ -445,7 +394,6 @@ function submit(e) {
     flex-direction: column;
     gap: 12px;
   }
-  .info-credit,
   .info-text {
     white-space: normal;
   }
@@ -489,7 +437,6 @@ function submit(e) {
     margin: 40px 0 0;
     padding: 0 24px;
   }
-  .info-credit,
   .info-text {
     white-space: nowrap;
   }
