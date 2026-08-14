@@ -1,7 +1,6 @@
 ﻿<script setup>
 import { navLinks, socialLinks, footerInfo, assets } from '../data/site'
 import LogoMark from './LogoMark.vue'
-import etagLogoUrl from '../assets/ETAG_logo.svg'
 </script>
 
 <template>
@@ -35,9 +34,6 @@ import etagLogoUrl from '../assets/ETAG_logo.svg'
         <p class="info-text">{{ footerInfo.lineOne }}</p>
         <p class="info-text">{{ footerInfo.lineTwo }}</p>
       </div>
-      <div class="footer-background">
-        <img :src="etagLogoUrl" class="bg-tile" alt="" aria-hidden="true" />
-      </div>
     </div>
   </footer>
 </template>
@@ -48,7 +44,6 @@ import etagLogoUrl from '../assets/ETAG_logo.svg'
   color: #000;
   font-family: 'Maison Neue', sans-serif;
   font-synthesis: none;
-  min-height: 1123px;
   overflow: hidden;
   position: relative;
 }
@@ -159,26 +154,6 @@ import etagLogoUrl from '../assets/ETAG_logo.svg'
   text-transform: uppercase;
   white-space: nowrap;
 }
-.footer-background {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 24px 48px 96px;
-  position: relative;
-  width: 100%;
-  z-index: 0;
-}
-.bg-tile {
-  display: block;
-  height: auto;
-  max-width: 100%;
-  opacity: 0.12;
-  position: relative;
-  width: min(780px, 80%);
-  z-index: 0;
-}
 @media (max-width: 1480px) {
   .footer-links {
     gap: 36px;
@@ -246,7 +221,6 @@ import etagLogoUrl from '../assets/ETAG_logo.svg'
 @media (max-width: 768px) {
   .yoo-footer {
     background: #f5f5f5;
-    min-height: 1190px;
   }
   .footer-container {
     gap: 0;
@@ -276,19 +250,6 @@ import etagLogoUrl from '../assets/ETAG_logo.svg'
   }
   .info-text {
     white-space: nowrap;
-  }
-  .footer-background {
-    justify-content: center;
-    margin: 24px auto 0;
-    max-width: 440px;
-    overflow: hidden;
-    padding: 0 24px 64px;
-    transform: none;
-    width: 100%;
-  }
-  .bg-tile {
-    height: auto;
-    width: 100%;
   }
 }
 </style>

@@ -174,7 +174,7 @@ function onTab(i) {
                 <router-link
                   v-for="(card, ci) in row.cards"
                   :key="ci"
-                  to="/projects"
+                  :to="`/projects/${card.slug}`"
                   class="project-card project-card-link"
                   :class="[`project-card-${ci + 1 + (row.className === 'row-2' ? 3 : row.className === 'row-3' ? 5 : 0)}`, card.widthClass]"
                   :aria-label="card.title"
