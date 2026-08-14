@@ -15,15 +15,16 @@ const labelWidth = ref('0px')
 
 const isLink = computed(() => !!props.href && props.href !== '#')
 
-function onClick(e) {
+function onClick() {
   if (!isLink.value) {
-    e.preventDefault()
     emit('click')
   }
 }
 
 onMounted(() => {
-  const measure = root.value?.querySelector('.home-cta-button__measure')
+  const el = root.value
+  if (!el) return
+  const measure = el.querySelector('.home-cta-button__measure')
   if (measure) {
     expandedWidth.value = Math.ceil(measure.getBoundingClientRect().width) + 'px'
     const label = measure.querySelector('.home-cta-button__measure-label')
@@ -33,26 +34,47 @@ onMounted(() => {
 </script>
 
 <template>
-  <a
-    ref="root"
-    :href="isLink ? href : '#'"
-    class="home-cta-button"
-    :class="{ 'is-accent': accent }"
-    :style="{ '--home-cta-expanded-width': expandedWidth, '--home-cta-label-width': labelWidth }"
-    @click="onClick"
-  >
-    <span class="home-cta-button__measure" aria-hidden="true">
-      <span class="home-cta-button__measure-label">{{ label }}</span>
-      <span class="home-cta-button__measure-icon">→</span>
-    </span>
-    <span class="home-cta-button__label-wrap">
-      <span class="home-cta-button__label">{{ label }}</span>
-    </span>
-    <span class="home-cta-button__icon">→</span>
-  </a>
+  <span ref="root" class="home-cta-button-root">
+    <router-link
+      v-if="isLink"
+      :to="href"
+      class="home-cta-button"
+      :class="{ 'is-accent': accent }"
+      :style="{ '--home-cta-expanded-width': expandedWidth, '--home-cta-label-width': labelWidth }"
+    >
+      <span class="home-cta-button__measure" aria-hidden="true">
+        <span class="home-cta-button__measure-label">{{ label }}</span>
+        <span class="home-cta-button__measure-icon">→</span>
+      </span>
+      <span class="home-cta-button__label-wrap">
+        <span class="home-cta-button__label">{{ label }}</span>
+      </span>
+      <span class="home-cta-button__icon">→</span>
+    </router-link>
+    <button
+      v-else
+      type="button"
+      class="home-cta-button"
+      :class="{ 'is-accent': accent }"
+      :style="{ '--home-cta-expanded-width': expandedWidth, '--home-cta-label-width': labelWidth }"
+      @click="onClick"
+    >
+      <span class="home-cta-button__measure" aria-hidden="true">
+        <span class="home-cta-button__measure-label">{{ label }}</span>
+        <span class="home-cta-button__measure-icon">→</span>
+      </span>
+      <span class="home-cta-button__label-wrap">
+        <span class="home-cta-button__label">{{ label }}</span>
+      </span>
+      <span class="home-cta-button__icon">→</span>
+    </button>
+  </span>
 </template>
 
 <style scoped>
+.home-cta-button-root {
+  display: inline-flex;
+}
 .home-cta-button {
   --home-cta-expanded-width: 77px;
   --home-cta-label-width: 0px;

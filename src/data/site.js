@@ -10,8 +10,6 @@ export const navLinks = [
   { label: 'EXPERTISE', href: '/expertise' },
   { label: 'PROJECTS', href: '/projects' },
   { label: 'ABOUT', href: '/about' },
-  { label: 'CASE STUDY', href: '/case-study' },
-  { label: 'NEWS & PRESS', href: '/news-press' },
   { label: 'CONTACT', href: '/contact' },
 ]
 
@@ -19,8 +17,6 @@ export const menuLinks = [
   { label: 'Expertise', href: '/expertise' },
   { label: 'Projects', href: '/projects' },
   { label: 'About', href: '/about' },
-  { label: 'Case Study', href: '/case-study' },
-  { label: 'News & Press', href: '/news-press' },
   { label: 'Contact', href: '/contact' },
 ]
 

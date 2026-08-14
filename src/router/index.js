@@ -26,34 +26,10 @@ const routes = [
     meta: { theme: 'dark' },
   },
   {
-    path: '/case-study',
-    name: 'case-study',
-    component: () => import('../views/CaseStudyView.vue'),
-    meta: { theme: 'dark' },
-  },
-  {
-    path: '/case-study/:slug',
-    name: 'case-study-detail',
-    component: () => import('../views/CaseStudyDetailView.vue'),
-    meta: { theme: 'dark' },
-  },
-  {
     path: '/about',
     name: 'about',
     component: () => import('../views/AboutView.vue'),
     meta: { theme: 'dark' },
-  },
-  {
-    path: '/news-press',
-    name: 'news-press',
-    component: () => import('../views/NewsPressView.vue'),
-    meta: { theme: 'light' },
-  },
-  {
-    path: '/news-press/:slug',
-    name: 'news-detail',
-    component: () => import('../views/NewsDetailView.vue'),
-    meta: { theme: 'light' },
   },
   {
     path: '/contact',

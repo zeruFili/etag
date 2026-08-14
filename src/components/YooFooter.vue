@@ -1,26 +1,7 @@
 ﻿<script setup>
-import { ref, onMounted } from 'vue'
 import { navLinks, socialLinks, footerInfo, assets } from '../data/site'
 import LogoMark from './LogoMark.vue'
 import etagLogoUrl from '../assets/ETAG_logo.svg'
-
-const email = ref('')
-const feedback = ref('')
-const submitting = ref(false)
-
-function submit(e) {
-  e.preventDefault()
-  if (!email.value) {
-    feedback.value = 'Please enter your email address.'
-    return
-  }
-  submitting.value = true
-  setTimeout(() => {
-    submitting.value = false
-    feedback.value = 'Thank you for subscribing.'
-    email.value = ''
-  }, 600)
-}
 </script>
 
 <template>
@@ -49,28 +30,6 @@ function submit(e) {
             <span aria-hidden="true">→</span>
           </a>
         </div>
-        <div class="newsletter">
-          <p class="newsletter-title">Newsletter</p>
-          <form class="newsletter-form" aria-label="Newsletter form" @submit="submit">
-            <input
-              v-model="email"
-              class="newsletter-input"
-              type="email"
-              placeholder="Your Email Address"
-              aria-label="Your Email Address"
-            />
-            <button class="newsletter-submit" type="submit" aria-label="Newsletter" :disabled="submitting">→</button>
-          </form>
-          <p v-if="feedback" class="newsletter-feedback" :class="{ 'is-error': feedback.includes('enter') }">
-            {{ feedback }}
-          </p>
-        </div>
-      </div>
-      <div class="footer-privacy-row">
-        <router-link to="/kvkk" class="footer-privacy-link">
-          <span>Data Privacy</span>
-          <span aria-hidden="true">→</span>
-        </router-link>
       </div>
       <div class="footer-info">
         <p class="info-text">{{ footerInfo.lineOne }}</p>
@@ -174,95 +133,6 @@ function submit(e) {
   line-height: 1.1;
   text-decoration: none;
 }
-.newsletter {
-  display: flex;
-  flex: 0 1 350px;
-  flex-direction: column;
-  gap: 16px;
-  margin-left: auto;
-  max-width: 350px;
-  min-width: 280px;
-}
-.newsletter-title {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin: 0;
-}
-.newsletter-form {
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 222px;
-  display: flex;
-  gap: 8px;
-  padding: 4px 4px 4px 16px;
-}
-.newsletter-input {
-  background: transparent;
-  border: 0;
-  color: #000;
-  flex: 1;
-  font-family: 'Maison Neue', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
-  min-width: 160px;
-  outline: none;
-  padding: 8px 8px 8px 0;
-}
-.newsletter-input::placeholder {
-  color: #000;
-  opacity: 0.4;
-}
-.newsletter-submit {
-  background: #000;
-  border: 0;
-  border-radius: 222px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 18px;
-  height: 40px;
-  line-height: 1.1;
-  width: 73px;
-}
-.newsletter-submit:disabled {
-  cursor: wait;
-  opacity: 0.64;
-}
-.newsletter-feedback {
-  color: #000;
-  font-size: 12px;
-  line-height: 1.4;
-  margin: 0;
-}
-.newsletter-feedback.is-error {
-  color: #a63437;
-}
-.footer-privacy-row {
-  display: flex;
-  justify-content: flex-end;
-  margin: -64px 48px -80px;
-  position: relative;
-  z-index: 2;
-}
-.footer-privacy-link {
-  align-items: center;
-  color: #000;
-  display: inline-flex;
-  font-size: 12px;
-  font-weight: 300;
-  gap: 4px;
-  letter-spacing: -0.24px;
-  line-height: 1.1;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.footer-privacy-link:hover {
-  text-decoration: underline;
-}
 .footer-info {
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
@@ -321,17 +191,13 @@ function submit(e) {
     flex-basis: 220px;
     min-width: 176px;
   }
-  .newsletter {
-    flex-basis: 350px;
-    min-width: 232px;
-  }
 }
 @media (max-width: 1300px) {
   .footer-links {
     align-items: start;
     column-gap: 36px;
     display: grid;
-    grid-template-columns: 206px minmax(176px, 1fr) minmax(132px, 0.8fr) minmax(232px, 350px);
+    grid-template-columns: 206px minmax(176px, 1fr) minmax(132px, 0.8fr);
     row-gap: 32px;
   }
   .footer-logo-wrap {
@@ -346,15 +212,6 @@ function submit(e) {
   .social-links {
     grid-column: 3;
     grid-row: 1;
-  }
-  .newsletter {
-    flex-basis: auto;
-    grid-column: 4;
-    grid-row: 1;
-    justify-self: end;
-    max-width: 350px;
-    min-width: 0;
-    width: 100%;
   }
 }
 @media (max-width: 1120px) {
@@ -374,14 +231,6 @@ function submit(e) {
   .social-links {
     grid-column: 1;
     grid-row: 3;
-  }
-  .newsletter {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: end;
-    max-width: 350px;
-    min-width: 0;
-    width: 100%;
   }
 }
 @media (max-width: 1400px) {
@@ -411,18 +260,10 @@ function submit(e) {
     padding: 0 24px;
   }
   .footer-nav,
-  .newsletter,
   .social-links {
     max-width: none;
     min-width: 0;
     width: 100%;
-  }
-  .newsletter-form {
-    width: 100%;
-  }
-  .footer-privacy-row {
-    justify-content: flex-start;
-    margin: 40px 24px 0;
   }
   .footer-info {
     align-items: flex-start;
