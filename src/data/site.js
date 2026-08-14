@@ -31,10 +31,10 @@ export const menuCards = [
 ]
 
 export const socialLinks = [
-  { label: 'Facebook', href: 'https://www.facebook.com/ETAGInteriors/' },
-  { label: 'Instagram', href: 'https://www.instagram.com/etaginteriors/' },
-  { label: 'Linkedin', href: 'https://www.linkedin.com/company/etaginteriors/' },
-  { label: 'Youtube', href: 'https://www.youtube.com/etaginteriors' },
+  { label: 'Facebook', href: 'https://web.facebook.com/EtagInteriorAndBranding/?_rdc=1&_rdr#' },
+  { label: 'Instagram', href: 'https://www.instagram.com/etag_interiors/' },
+  { label: 'Linkedin', href: 'https://www.linkedin.com/company/etag-engineering-plc/' },
+  { label: 'Youtube', href: 'https://www.youtube.com/@etag7118' },
 ]
 
 export const legalLinks = [

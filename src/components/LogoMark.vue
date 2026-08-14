@@ -29,9 +29,11 @@ defineProps({
       <!-- A -->
       <path d="M176 72 L210 0 H228 L244 72 H224 L220 58 H194 L190 72 Z M198 40 H216 L207 12 Z" />
       <!-- G -->
-      <path
-        d="M258 0 H322 V18 H280 V26 H322 V54 H298 V72 H258 V0 Z M280 54 H300 V58 H280 Z"
-      />
+ <rect x="258" y="0" width="64" height="18" />
+      <rect x="258" y="0" width="18" height="72" />
+      <rect x="258" y="54" width="64" height="18" />
+      <rect x="280" y="36" width="42" height="18" />
+
     </g>
   </svg>
 </template>
