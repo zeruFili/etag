@@ -219,13 +219,13 @@ export const projects = [
 ]
 
 export const homeProjects = [
-  { slug: 'entoto-view-hotel', title: 'ENTOTO VIEW HOTEL', category: 'Hospitality', image: 'https://yoointerior.com/assets/home/projects/project-peninsula.png' },
-  { slug: 'abyssinia-boutique-hotel', title: 'ABYSSINIA BOUTIQUE HOTEL', category: 'Hospitality', image: 'https://yoointerior.com/assets/home/projects/project-akedo.png' },
-  { slug: 'gerji-business-park-office', title: 'GERJI BUSINESS PARK OFFICE', category: 'Office', image: 'https://yoointerior.com/assets/home/projects/project-nokta.jpg' },
-  { slug: 'nile-hotel-presidential-suite', title: 'NILE HOTEL PRESIDENTIAL SUITE', category: 'Hospitality', image: 'https://yoointerior.com/assets/home/projects/project-stregis.jpg' },
-  { slug: 'cmc-green-campus', title: 'CMC GREEN CAMPUS', category: 'Office', image: 'https://yoointerior.com/assets/home/projects/project-tekfen.jpg' },
-  { slug: 'old-airport-airline-office', title: 'OLD AIRPORT AIRLINE OFFICE', category: 'Office', image: 'https://yoointerior.com/assets/home/projects/project-thy.jpg' },
-  { slug: 'piazza-mall-flagship', title: 'PIAZZA MALL FLAGSHIP', category: 'Retail', image: 'https://yoointerior.com/assets/home/projects/project-louis-vuitton.png' },
+  { slug: 'yod-abyssinia-cultural-restaurant', title: 'YOD ABYSSINIA', category: 'F&B', image: DI + '1785321976882--1.g-rsel-1728-1038.webp' },
+  { slug: 'ras-dashen-restaurant-lounge', title: 'RAS DASHEN RESTAURANT & LOUNGE', category: 'F&B', image: DI + '1782461613318--1.g-rsel-1728-1038.webp' },
+  { slug: 'jupiter-international-hotel', title: 'JUPITER INTERNATIONAL HOTEL', category: 'Hospitality', image: DI + '1781186055624--1.g-rsel-1728-1038.webp' },
+  { slug: 'addis-tower-corporate-office', title: 'ADDIS TOWER CORPORATE OFFICE', category: 'Office', image: D + '1777039763909-yoointerior_thy-accounting_10.jpg' },
+  { slug: 'genet-restaurant-bole', title: 'GENET RESTAURANT', category: 'F&B', image: DI + '1782141593575--1.g-rsel-1728-1038.webp' },
+  { slug: 'hilltown-mall-retail', title: 'HILLTOWN MALL RETAIL', category: 'Retail', image: D + '1776837967235-yoointerior_beymen-hilltown_12.jpg' },
+  { slug: 'kality-industrial-office', title: 'KALITY INDUSTRIAL OFFICE', category: 'Office', image: DI + '1782138923684--1.g-rsel-1728-1038.webp' },
 ]
 
 export const projectCategories = ['F&B', 'Office', 'Retail', 'Hospitality']
