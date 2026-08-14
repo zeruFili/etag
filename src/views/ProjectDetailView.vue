@@ -12,7 +12,13 @@ const route = useRoute()
 
 const project = computed(() => {
   const found = projects.find((p) => p.slug === route.params.slug)
-  if (found) return found
+  if (found) {
+    return {
+      ...found,
+      hero: found.hero || (found.thumb ? found.thumb.src : null),
+      gallery: found.gallery || [],
+    }
+  }
   // fallback for slugs not in the detailed list
   return {
     slug: route.params.slug,

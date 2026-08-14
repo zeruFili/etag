@@ -54,11 +54,3 @@ export const assets = {
   topLine: 'https://yoointerior.com/assets/footer/top-line.svg',
   heroVideo: `${import.meta.env.BASE_URL}hero.mp4`,
 }
-
-export const footerBackgroundTiles = [
-  { src: 'https://yoointerior.com/assets/footer/background-1.svg', width: '979.41px' },
-  { src: 'https://yoointerior.com/assets/footer/background-2.svg', width: '979.41px' },
-  { src: 'https://yoointerior.com/assets/footer/background-3.svg', width: '979.38px' },
-  { src: 'https://yoointerior.com/assets/footer/background-4.svg', width: '979.425px' },
-  { src: 'https://yoointerior.com/assets/footer/background-5.svg', width: '979.384px' },
-]

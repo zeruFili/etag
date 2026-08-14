@@ -27,7 +27,11 @@ watch(
 function onKey(e) {
   if (e.key === 'Escape') closeMenu()
 }
-onMounted(() => window.addEventListener('keydown', onKey))
+onMounted(() => {
+  window.addEventListener('keydown', onKey)
+  // Always land on the first section on initial load.
+  window.scrollTo(0, 0)
+})
 
 function handleOpenMenu() {
   openMenu()

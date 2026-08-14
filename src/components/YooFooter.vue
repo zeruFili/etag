@@ -1,7 +1,8 @@
 ﻿<script setup>
 import { ref, onMounted } from 'vue'
-import { navLinks, socialLinks, footerInfo, footerBackgroundTiles, assets } from '../data/site'
+import { navLinks, socialLinks, footerInfo, assets } from '../data/site'
 import LogoMark from './LogoMark.vue'
+import etagLogoUrl from '../assets/ETAG_logo.svg'
 
 const email = ref('')
 const feedback = ref('')
@@ -76,15 +77,7 @@ function submit(e) {
         <p class="info-text">{{ footerInfo.lineTwo }}</p>
       </div>
       <div class="footer-background">
-        <img
-          v-for="tile in footerBackgroundTiles"
-          :key="tile.src"
-          :src="tile.src"
-          :style="{ width: tile.width }"
-          class="bg-tile"
-          alt=""
-          aria-hidden="true"
-        />
+        <img :src="etagLogoUrl" class="bg-tile" alt="" aria-hidden="true" />
       </div>
     </div>
   </footer>
@@ -299,18 +292,21 @@ function submit(e) {
 .footer-background {
   align-items: center;
   display: flex;
-  gap: 6.76px;
-  margin-left: calc(50% - 50vw);
+  justify-content: center;
+  margin: 0 auto;
   overflow: hidden;
+  padding: 24px 48px 96px;
   position: relative;
-  width: 4924.048px;
+  width: 100%;
   z-index: 0;
 }
 .bg-tile {
   display: block;
-  flex-shrink: 0;
-  height: 546px;
+  height: auto;
+  max-width: 100%;
+  opacity: 0.12;
   position: relative;
+  width: min(780px, 80%);
   z-index: 0;
 }
 @media (max-width: 1480px) {
@@ -441,19 +437,17 @@ function submit(e) {
     white-space: nowrap;
   }
   .footer-background {
-    gap: 2.028px;
-    justify-content: flex-start;
-    left: auto;
-    margin-left: 0;
-    margin-top: 96px;
+    justify-content: center;
+    margin: 24px auto 0;
     max-width: 440px;
     overflow: hidden;
+    padding: 0 24px 64px;
     transform: none;
     width: 100%;
   }
   .bg-tile {
-    height: 163.776px;
-    width: auto !important;
+    height: auto;
+    width: 100%;
   }
 }
 </style>
