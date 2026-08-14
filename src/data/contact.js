@@ -1,0 +1,35 @@
+// Contact page data.
+export const contactPage = {
+  title: 'CONTACT',
+  tagline: 'We carry the flag of success, around the world.',
+  locations: [
+    {
+      id: 'Main Office',
+      tabLabel: 'Main Office',
+      cardTitle: 'Main Office',
+      address: 'Akat Mahallesi, Hare Sokak, No:10,12 34335 Be\u015fikta\u015f, \u0130stanbul',
+      phone: '+90 212 227 71 33',
+      email: 'info@etaginteriors.com',
+      ctaLabel: 'CONTACT US',
+      ctaHref: 'mailto:info@etaginteriors.com?subject=ETAG%20Headquarter%20Inquiry',
+      latitude: 41.0898888,
+      longitude: 29.0193082,
+      zoom: 15,
+    },
+    {
+      id: 'US Office',
+      tabLabel: 'US Office',
+      cardTitle: 'US Office',
+      address: '2883 SW 69 Court Miami FL 33155',
+      phone: '(305) 351-0675',
+      email: 'info@etaginteriors.com',
+      ctaLabel: 'CONTACT US',
+      ctaHref: 'mailto:info@etaginteriors.com?subject=ETAG%20Miami%20Office%20Inquiry',
+      latitude: 25.742,
+      longitude: -80.31,
+      zoom: 15,
+    },
+  ],
+  mapTileLayer: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+  mapAttribution: '\u00a9 OpenStreetMap contributors \u00a9 CARTO',
+}
